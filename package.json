@@ -2,13 +2,14 @@
   "name": "angular-uswds-starter-project",
   "version": "0.0.2",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
+    "ng": "ng ",
+    "start": "ng server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build-ghp": "ng build --prod --output-path docs --base-href /angular-uswds-starter-project/"
+    "build-ghp": "ng build --prod --output-path docs --base-href /angular-uswds-starter-project/",
+    "postinstall": "ng build ---aot --target=production"
   },
   "private": true,
   "dependencies": {
@@ -20,6 +21,7 @@
     "@angular/platform-browser": "~9.1.4",
     "@angular/platform-browser-dynamic": "~9.1.4",
     "@angular/router": "~9.1.4",
+    "express": "^4.17.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "uswds": "^2.7.0",
@@ -45,5 +47,9 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~3.8.3"
+  },
+  "engines": {
+    "node": "12.16.2",
+    "npm": "6.14.4"
   }
 }
