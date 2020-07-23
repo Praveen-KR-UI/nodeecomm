@@ -1,53 +1,68 @@
-# NodeJS Express (server) with Angular CLI (client) Starter 
-NodeJS Express (server) with Angular CLI (client) Starter. This starter gives you the opportunity to separate totally your client and server applications ang bring them together for Development (proxy) and Production. Please note that the code in the client just came from the execution `$ ng new client` and the code in the server came from the execution `$ express --view=pug server` (after installing the Express Generator `$ npm install express-generator -g`).
+# USWDS based Angular Starter Project
 
-## Development
-```bash
-$ npm run install:packages
-$ npm run start
+Starter Angular project based on the USWDS theme, mostly suited for the US Federal Govt Projects.
+
+The [United States Web Design System](https://designsystem.digital.gov) includes a library of open source UI components and a visual style guide for U.S. federal government websites.
+
+## Prerequisites 
+
+```
+Angular CLI: 9.1.6
+Node: 12.16.1
+OS: win32 x64
+
+Angular: 9.1.7
+... animations, common, compiler, compiler-cli, core, forms
+... language-service, platform-browser, platform-browser-dynamic
+... router
+Ivy Workspace: Yes
+
+Package                           Version
+-----------------------------------------------------------
+@angular-devkit/architect         0.901.6
+@angular-devkit/build-angular     0.901.6
+@angular-devkit/build-optimizer   0.901.6
+@angular-devkit/build-webpack     0.901.6
+@angular-devkit/core              9.1.6
+@angular-devkit/schematics        9.1.6
+@angular/cli                      9.1.6
+@ngtools/webpack                  9.1.6
+@schematics/angular               9.1.6
+@schematics/update                0.901.6
+rxjs                              6.5.5
+typescript                        3.8.3
+webpack                           4.42.0
+
 ```
 
-Browse the Application (Client):
-```bash
-http://localhost:4200/
+## Running the project
+
+
+git clone https://github.com/wasatchinfotech/angular-uswds-starter-project.git
+
+``` 
+npm install
+
 ```
 
-Browse the Server:
-```bash
-http://localhost:8080/api
-http://localhost:8080/api/users
+After installing all the required modules, start the serve with
+
+```
+ng serve 
+
 ```
 
-The `$ npm run start` execute the following script `concurrently --kill-others \"cd client && ng serve --disable-host-check --proxy-config proxy.conf.json\" \"cd server && nodemon ./bin/www\"`. Please have in mind the client/proxy.conf.json file.
+Open link : http://localhost:4200/
 
-```json
-{
-  "/api": {
-    "target": "http://localhost:3000",
-    "secure": false
-  }
-}
-```
-Please note that the PORT 3000 is the default NodeJS Express PORT.
+http://localhost:4200/sign-in
 
-## Build (dist)
-```bash
-$ npm run build
-```
+angular/angular9
 
-## Run Build (production ready)
-```bash
-$ cd dist/server
-$ PORT=8000 NODE_ENV=production node bin/www
-```
+This will create auth features to go secured pages, also dynamically show/hide nav links based on authentication
 
-Browse the Application (Client/Server):
-```bash
-http://localhost:8000/
-http://localhost:8000/api
-http://localhost:8000/api/users
-```
+http://localhost:4200/dashboard
 
-## License
 
-MIT © [George I. Tsopouridis](gtsopour@gmail.com)
+## Contact
+
+rahul.dongre@wasatchinfotech.com
